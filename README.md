@@ -2,7 +2,7 @@
 GitHub Action Runner Controller (ARC) for OpenShift
 
 ```
-NAMESPACE="arc-systems"
+NAMESPACE="github-arc-systems"
 helm install arc \
     --namespace "${NAMESPACE}" \
     --create-namespace \
@@ -10,8 +10,8 @@ helm install arc \
 ```
 
 ```
-INSTALLATION_NAME="arc-runner-set"
-NAMESPACE="arc-runners"
+INSTALLATION_NAME="github-arc-runner-set"
+NAMESPACE="github-arc-runners"
 GITHUB_CONFIG_URL="https://github.com/<your_enterprise/org/repo>"
 GITHUB_PAT="<PAT>"
 helm install "${INSTALLATION_NAME}" \
