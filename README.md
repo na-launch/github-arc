@@ -20,6 +20,7 @@ helm install "${INSTALLATION_NAME}" \
     --create-namespace \
     --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
     --set githubConfigSecret.github_token="${GITHUB_PAT}" \
+    --set controllerServiceAccount.name="${INSTALLATION_NAME}-gha-rs-no-permission" \
     -f values.yaml \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
 ```
