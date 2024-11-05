@@ -16,7 +16,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: arc-runners-github-arc-scc
+  name: github-arc-runner-github-arc-scc
   namespace: github-arc-runners
 roleRef:
   apiGroup: rbac.authorization.k8s.io
