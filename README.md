@@ -3,15 +3,16 @@ GitHub Action Runner Controller (ARC) for OpenShift
 
 ```
 NAMESPACE="github-arc-systems"
-helm install arc \
+INSTALLATION_NAME="github-arc-system"
+helm install "${INSTALLATION_NAME}"\
     --namespace "${NAMESPACE}" \
     --create-namespace \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
 ```
 
 ```
-INSTALLATION_NAME="github-arc-runner-set"
 NAMESPACE="github-arc-runners"
+INSTALLATION_NAME="github-arc-runner-set"
 GITHUB_CONFIG_URL="https://github.com/<your_enterprise/org/repo>"
 GITHUB_PAT="<PAT>"
 helm install "${INSTALLATION_NAME}" \
