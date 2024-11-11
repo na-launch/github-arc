@@ -3,7 +3,8 @@ GitHub Action Runner Controller (ARC) for OpenShift
 
 Set values for reusability between helm charts
 
-Note: GITHUB_ARC_RUNNER_INSTALLATION_NAME is the value that is surfaced in GitHub Actions UI and used within actions to trigger jobs on those specific runners.
+Note: 
+`GITHUB_ARC_RUNNER_INSTALLATION_NAME` is the value that is surfaced in GitHub Actions UI and used within actions to trigger jobs on those specific runners.
 ```
 export GITHUB_ARC_SYSTEM_NAMESPACE="github-arc-system"
 export GITHUB_ARC_SYSTEM_INSTALLATION_NAME="github-arc-system"
