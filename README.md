@@ -2,6 +2,8 @@
 GitHub Action Runner Controller (ARC) for OpenShift
 
 Set values for reusability between helm charts
+
+Note: GITHUB_ARC_RUNNER_INSTALLATION_NAME is the value that is surfaced in GitHub Actions UI and used within actions to trigger jobs on those specific runners.
 ```
 export GITHUB_ARC_SYSTEM_NAMESPACE="github-arc-system"
 export GITHUB_ARC_SYSTEM_INSTALLATION_NAME="github-arc-system"
@@ -38,3 +40,5 @@ Create custom SCC required for executing runners on OpenShift and bind this role
 oc apply -f manifests/scc.yaml
 oc policy add-role-to-user github-arc -z ${GITHUB_ARC_RUNNER_INSTANCE_NAME}-gha-rs-no-permission -n ${GITHUB_ARC_RUNNER_NAMESPACE}
 ```
+
+TODO: Update documentation for configuration of multiple runner groups
