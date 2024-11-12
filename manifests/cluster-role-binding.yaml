@@ -12,17 +12,17 @@ rules:
   - securitycontextconstraints
   verbs:
   - use
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: github-arc-runner-scc
-  namespace: github-arc-runners
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: system:openshift:scc:github-arc
-subjects:
-- kind: ServiceAccount
-  name: github-arc-runners-gha-rs-no-permission
-  namespace: github-arc-runners
+# ---
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: RoleBinding
+# metadata:
+#   name: github-arc-runner-scc
+#   namespace: github-arc-runners
+# roleRef:
+#   apiGroup: rbac.authorization.k8s.io
+#   kind: ClusterRole
+#   name: system:openshift:scc:github-arc
+# subjects:
+# - kind: ServiceAccount
+#   name: github-arc-runners-gha-rs-no-permission
+#   namespace: github-arc-runners
