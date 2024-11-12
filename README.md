@@ -49,9 +49,14 @@ oc policy add-role-to-user system:openshift:scc:github-arc -z ${GITHUB_ARC_RUNNE
 
 * Maintain the original ARC system namespace and system installation name. You do not need to create additional ARC Systems. One ARC system can handle multiple runner sets.
 * You do not need to create the `SecurityContextConstraint` and `ClusterRole` again.
+
+DO NOT CHANGE THESE
 ```
 export GITHUB_ARC_SYSTEM_NAMESPACE="github-arc-system"
 export GITHUB_ARC_SYSTEM_INSTALLATION_NAME="github-arc-system"
+```
+Update these values for your desired runner namespace and installation name (refereneced in Actions jobs)
+```
 export GITHUB_ARC_RUNNER_NAMESPACE_ADDITIONAL="github-arc-runners-additional"
 export GITHUB_ARC_RUNNER_INSTALLATION_NAME_ADDITIONAL="github-arc-runners-additional"
 ```
