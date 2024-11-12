@@ -39,7 +39,7 @@ helm install "${GITHUB_ARC_RUNNER_INSTALLATION_NAME}" \
 Create custom SCC required for executing runners on OpenShift and bind this role to the Runner Set controller
 ```
 oc apply -f manifests/scc.yaml
-oc policy add-role-to-user github-arc -z ${GITHUB_ARC_RUNNER_INSTALLATION_NAME}-gha-rs-no-permission -n ${GITHUB_ARC_RUNNER_NAMESPACE}
+oc policy add-role-to-user system:openshift:scc:github-arc -z ${GITHUB_ARC_RUNNER_INSTALLATION_NAME}-gha-rs-no-permission -n ${GITHUB_ARC_RUNNER_NAMESPACE}
 ```
 
 TODO: Update documentation for configuration of multiple runner groups
