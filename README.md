@@ -36,7 +36,7 @@ helm install "${GITHUB_ARC_RUNNER_INSTALLATION_NAME}" \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
 ```
 
-Create custom SCC required for executing runners on OpenShift and bind this role to the Runner Set controller
+Create custom SecurityContextConstraint and ClusterRole required for executing runners on OpenShift. Bind this role to the RunnerSet ServiceAccount
 ```
 oc apply -f manifests/scc.yaml
 oc apply -f manifests/cluster-role.yaml
