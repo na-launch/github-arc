@@ -1,7 +1,7 @@
 # github-arc
 GitHub Action Runner Controller (ARC) for OpenShift
 
-## installation
+## Installation
 
 ### Set values for reusability between helm charts
 
