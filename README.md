@@ -57,7 +57,7 @@ DO NOT CHANGE THESE
 export GITHUB_ARC_SYSTEM_NAMESPACE="github-arc-system"
 export GITHUB_ARC_SYSTEM_INSTALLATION_NAME="github-arc-system"
 ```
-Update these values for your desired runner namespace and installation name (refereneced in Actions jobs)
+Update these values for your desired runner namespace and installation name (referenced in Actions jobs)
 ```
 export GITHUB_ARC_RUNNER_NAMESPACE_ADDITIONAL="github-arc-runners-additional"
 export GITHUB_ARC_RUNNER_INSTALLATION_NAME_ADDITIONAL="github-arc-runners-additional"
