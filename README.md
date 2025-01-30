@@ -1,6 +1,8 @@
 # github-arc
 GitHub Action Runner Controller (ARC) for OpenShift
 
+This repo contains the steps necessary to deploy GitHub ARC on OpenShift. Deploying to OpenShift. Once deployed additional runners will appear within the Actions UI as "Self-hosted runners" which correspond to the names used in the steps below (github-arc-runners, github-arc-runners-additional). These names are examples and can be modified to fit your needs.
+
 ## Installation
 
 ### Set values for reusability between helm charts
@@ -45,7 +47,7 @@ oc apply -f manifests/cluster-role.yaml
 oc policy add-role-to-user system:openshift:scc:github-arc -z ${GITHUB_ARC_RUNNER_INSTALLATION_NAME}-gha-rs-no-permission -n ${GITHUB_ARC_RUNNER_NAMESPACE}
 ```
 
-## To create additional RunnerSets apply the following steps.
+## To create additional RunnerSets apply the following steps
 
 * Maintain the original ARC system namespace and system installation name. You do not need to create additional ARC Systems. One ARC system can handle multiple runner sets.
 * You do not need to create the `SecurityContextConstraint` and `ClusterRole` again.
@@ -74,7 +76,7 @@ helm install "${GITHUB_ARC_RUNNER_INSTALLATION_NAME_ADDITIONAL}" \
     -f values.yaml \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
 ```
-### Apply the policy to the 
+### Apply the policy to the newly created RunnerSet
 ```
 oc policy add-role-to-user system:openshift:scc:github-arc -z ${GITHUB_ARC_RUNNER_INSTALLATION_NAME_ADDITIONAL}-gha-rs-no-permission -n ${GITHUB_ARC_RUNNER_NAMESPACE_ADDITIONAL}
 ```
