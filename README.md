@@ -1,7 +1,7 @@
 # github-arc
 GitHub Action Runner Controller (ARC) for OpenShift
 
-This repo contains the steps necessary to deploy GitHub ARC on OpenShift. Deploying to OpenShift. Once deployed additional runners will appear within the Actions UI as "Self-hosted runners" which correspond to the names used in the steps below (github-arc-runners, github-arc-runners-additional). These names are examples and can be modified to fit your needs.
+This repo contains the steps necessary to deploy GitHub ARC on OpenShift. Once deployed additional runners will appear within the Actions UI as "Self-hosted runners" which correspond to the names used in the steps below (github-arc-runners, github-arc-runners-additional). These names are examples and can be modified to fit your needs.
 
 ## Installation
 
