@@ -22,6 +22,7 @@ helm install ${GITHUB_ARC_SYSTEM_INSTALLATION_NAME} \
     --namespace "${GITHUB_ARC_SYSTEM_NAMESPACE}" \
     --create-namespace \
     --set serviceAccount.name="${GITHUB_ARC_SYSTEM_INSTALLATION_NAME}-gha-rs-controller" \
+    --version 0.10.1 \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
 ```
 
@@ -36,6 +37,7 @@ helm install "${GITHUB_ARC_RUNNER_INSTALLATION_NAME}" \
     --set githubConfigSecret.github_token="${GITHUB_PAT}" \
     --set controllerServiceAccount.name="${GITHUB_ARC_SYSTEM_INSTALLATION_NAME}-gha-rs-controller" \
     --set controllerServiceAccount.namespace="${GITHUB_ARC_SYSTEM_NAMESPACE}" \
+    --version 0.10.1 \
     -f values.yaml \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
 ```
